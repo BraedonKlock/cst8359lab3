@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "Workshops";
+}
+
+<div class="container mt-4">
+
+    <h1>Workshop Registration</h1>
+
+    <p class="lead">
+        Welcome to the Workshop RSVP system.
+    </p>
+
+    <p>
+        Register for an upcoming workshop or view existing registrations.
+    </p>
+
+    <a asp-controller="Workshops"
+       asp-action="RsvpForm"
+       class="btn btn-primary">
+        Register for a Workshop
+    </a>
+
+    <a asp-controller="Workshops"
+       asp-action="Registrations"
+       class="btn btn-secondary">
+        View Registrations
+    </a>
+
+</div>

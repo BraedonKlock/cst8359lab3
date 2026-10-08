@@ -1,0 +1,7 @@
+/home/braedonk/CET-CS/Level06/NET/Lab03/publish/Lab03
+/home/braedonk/CET-CS/Level06/NET/Lab03/publish/appsettings.Development.json
+/home/braedonk/CET-CS/Level06/NET/Lab03/publish/appsettings.json
+/home/braedonk/CET-CS/Level06/NET/Lab03/publish/Lab03.dll
+/home/braedonk/CET-CS/Level06/NET/Lab03/publish/Lab03.deps.json
+/home/braedonk/CET-CS/Level06/NET/Lab03/publish/Lab03.runtimeconfig.json
+/home/braedonk/CET-CS/Level06/NET/Lab03/publish/Lab03.pdb

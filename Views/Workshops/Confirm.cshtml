@@ -1,0 +1,42 @@
+@model Lab03.Models.Rsvp
+
+@{
+    ViewData["Title"] = "RSVP Confirmation";
+}
+
+<div class="container mt-4">
+
+    <h1>Registration Confirmation</h1>
+
+    <div class="alert alert-success">
+
+        <h4>@ViewData["Message"]</h4>
+
+        <p>Your RSVP has been successfully submitted.</p>
+
+    </div>
+
+    <h4>Registration Details</h4>
+
+    <p>
+        <strong>Name:</strong> @Model.FullName
+    </p>
+
+    <p>
+        <strong>Workshop:</strong> @Model.WorkshopTitle
+    </p>
+
+    <p>
+        <strong>Accommodation Required:</strong>
+        @(Model.NeedsAccommodation ? "Yes" : "No")
+    </p>
+
+    <a asp-action="Registrations" class="btn btn-primary">
+        View Registrations
+    </a>
+
+    <a asp-action="Index" class="btn btn-secondary">
+        Back to Workshops
+    </a>
+
+</div>
