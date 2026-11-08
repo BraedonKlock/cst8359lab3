@@ -1,11 +1,18 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Lab03.Data;
 using Lab03.Models;
 
 namespace Lab03.Controllers
 {
     public class WorkshopsController : Controller
     {
-        private static readonly List<Rsvp> registrations = new();
+        private readonly ApplicationDbContext _context;
+
+        public WorkshopsController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
 
         [HttpGet]
         public IActionResult Index()
@@ -28,16 +35,18 @@ namespace Lab03.Controllers
                 return View("RsvpForm", model);
             }
 
-            registrations.Add(model);
-
             ViewData["Message"] = $"Thanks for registering, {model.FullName}!";
 
             return View(model);
         }
 
         [HttpGet]
-        public IActionResult Registrations()
+        public async Task<IActionResult> Registrations()
         {
+            var registrations = await _context.Rsvps
+                .AsNoTracking()
+                .ToListAsync();
+
             return View(registrations);
         }
     }
